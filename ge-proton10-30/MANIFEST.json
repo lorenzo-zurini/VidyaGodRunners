@@ -1,0 +1,28 @@
+{
+    "PACKAGEUID": "runner-ge-proton10-30",
+    "PACKAGENAME": "GE-Proton 10-30",
+    "PACKAGEVERSION": "10-30",
+    "HOST_PLATFORM": "linux64",
+    "RUNNERS": [
+        {
+            "RUNNER_ID": "ge-proton10-30",
+            "NAME": "GE-Proton10-30",
+            "TYPE": "wine",
+            "GUEST_PLATFORM": [
+                "win32",
+                "win64"
+            ],
+            "EXECUTABLE": "umu-run",
+            "ENV": {
+                "WINEPREFIX": "%RuntimePath%",
+                "GAMEID": "%UMUID%",
+                "PROTON_VERB": "waitforexitandrun"
+            },
+            "REMOVE_ENV": [
+                "LD_LIBRARY_PATH"
+            ],
+            "ARGS": [],
+            "MODULES": []
+        }
+    ]
+}

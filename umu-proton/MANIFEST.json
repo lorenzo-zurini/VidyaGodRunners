@@ -1,0 +1,28 @@
+{
+    "PACKAGEUID": "runner-umu-proton",
+    "PACKAGENAME": "umu-proton",
+    "PACKAGEVERSION": "1.0",
+    "HOST_PLATFORM": "linux64",
+    "RUNNERS": [
+        {
+            "RUNNER_ID": "umu-proton",
+            "NAME": "umu-proton",
+            "TYPE": "wine",
+            "GUEST_PLATFORM": [
+                "win32",
+                "win64"
+            ],
+            "EXECUTABLE": "umu-run",
+            "ENV": {
+                "WINEPREFIX": "%RuntimePath%",
+                "GAMEID": "%UMUID%",
+                "PROTON_VERB": "waitforexitandrun"
+            },
+            "REMOVE_ENV": [
+                "LD_LIBRARY_PATH"
+            ],
+            "ARGS": [],
+            "MODULES": []
+        }
+    ]
+}

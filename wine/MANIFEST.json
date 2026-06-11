@@ -1,0 +1,26 @@
+{
+    "PACKAGEUID": "runner-wine",
+    "PACKAGENAME": "Wine",
+    "PACKAGEVERSION": "1.0",
+    "HOST_PLATFORM": "linux64",
+    "RUNNERS": [
+        {
+            "RUNNER_ID": "wine",
+            "NAME": "wine",
+            "TYPE": "wine",
+            "GUEST_PLATFORM": [
+                "win32",
+                "win64"
+            ],
+            "EXECUTABLE": "wine",
+            "ENV": {
+                "WINEPREFIX": "%RuntimePath%"
+            },
+            "REMOVE_ENV": [
+                "LD_LIBRARY_PATH"
+            ],
+            "ARGS": [],
+            "MODULES": []
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "PACKAGEUID": "runner-snes9x",
+    "PACKAGENAME": "Snes9x",
+    "PACKAGEVERSION": "1.0",
+    "HOST_PLATFORM": "linux64",
+    "RUNNERS": [
+        {
+            "RUNNER_ID": "snes9x",
+            "NAME": "snes9x",
+            "TYPE": "emulator",
+            "GUEST_PLATFORM": [
+                "snes"
+            ],
+            "EXECUTABLE": "snes9x",
+            "ENV": {},
+            "REMOVE_ENV": [],
+            "ARGS": [
+                "-fullscreen"
+            ],
+            "MODULES": []
+        }
+    ]
+}
