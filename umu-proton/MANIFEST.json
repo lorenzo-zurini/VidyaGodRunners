@@ -14,7 +14,7 @@
             ],
             "EXECUTABLE": "umu-run",
             "ENV": {
-                "WINEPREFIX": "%RuntimePath%",
+                "WINEPREFIX": "%WinePrefix%",
                 "GAMEID": "%UMUID%",
                 "PROTON_VERB": "waitforexitandrun"
             },

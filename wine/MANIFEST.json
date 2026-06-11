@@ -14,7 +14,7 @@
             ],
             "EXECUTABLE": "wine",
             "ENV": {
-                "WINEPREFIX": "%RuntimePath%"
+                "WINEPREFIX": "%WinePrefix%"
             },
             "REMOVE_ENV": [
                 "LD_LIBRARY_PATH"

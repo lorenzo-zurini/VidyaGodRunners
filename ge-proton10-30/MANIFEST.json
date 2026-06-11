@@ -6,22 +6,28 @@
     "RUNNERS": [
         {
             "RUNNER_ID": "ge-proton10-30",
-            "NAME": "GE-Proton10-30",
+            "NAME": "GE-Proton 10-30",
             "TYPE": "wine",
             "GUEST_PLATFORM": [
                 "win32",
                 "win64"
             ],
-            "EXECUTABLE": "umu-run",
+            "EXECUTABLE": "%RunnerRuntimePath%/proton",
+            "PREFIX_SUBPATH": "pfx",
+            "SOURCE": {
+                "TYPE": "ipfs",
+                "CID": ""
+            },
+            "ARGS": [
+                "waitforexitandrun"
+            ],
             "ENV": {
-                "WINEPREFIX": "%RuntimePath%",
-                "GAMEID": "%UMUID%",
-                "PROTON_VERB": "waitforexitandrun"
+                "STEAM_COMPAT_DATA_PATH": "%PrefixBase%",
+                "STEAM_COMPAT_CLIENT_INSTALL_PATH": "%TempPath%"
             },
             "REMOVE_ENV": [
                 "LD_LIBRARY_PATH"
             ],
-            "ARGS": [],
             "MODULES": []
         }
     ]
