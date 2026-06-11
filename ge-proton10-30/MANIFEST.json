@@ -3,6 +3,22 @@
     "PACKAGENAME": "GE-Proton 10-30",
     "PACKAGEVERSION": "10-30",
     "HOST_PLATFORM": "linux64",
+    "COMPONENTS": [
+        {
+            "COMPONENTID": "geproton_build",
+            "NAME": "GE-Proton 10-30 build",
+            "SUBCOMPONENTS": [
+                {
+                    "TYPE": "VFSZipLayer",
+                    "TARGET": "",
+                    "SOURCE": {
+                        "TYPE": "ipfs",
+                        "CID": "QmPJGEBgFwCCTgAKaXDysNDXc28eDGeFK6qPT4YatDgRJj"
+                    }
+                }
+            ]
+        }
+    ],
     "RUNNERS": [
         {
             "RUNNER_ID": "ge-proton10-30",
@@ -12,12 +28,8 @@
                 "win32",
                 "win64"
             ],
-            "EXECUTABLE": "%RunnerRuntimePath%/proton",
+            "EXECUTABLE": "%RunnerMount%/proton",
             "PREFIX_SUBPATH": "pfx",
-            "SOURCE": {
-                "TYPE": "ipfs",
-                "CID": ""
-            },
             "ARGS": [
                 "waitforexitandrun"
             ],
