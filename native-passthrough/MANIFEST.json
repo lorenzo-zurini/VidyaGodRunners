@@ -2,20 +2,26 @@
     "PACKAGEUID": "runner-native-passthrough",
     "PACKAGENAME": "Native (passthrough)",
     "PACKAGEVERSION": "1.0",
-    "HOST_PLATFORM": "linux64",
     "RUNNERS": [
         {
             "RUNNER_ID": "native-passthrough",
             "NAME": "Native (passthrough)",
-            "TYPE": "native",
-            "GUEST_PLATFORM": [
-                "linux64"
-            ],
-            "EXECUTABLE": "",
-            "ENV": {},
-            "REMOVE_ENV": [],
-            "ARGS": [],
-            "MODULES": []
+            "VARIANTS": [
+                {
+                    "VARIANT_ID": "default",
+                    "HOST_PLATFORM": "linux64",
+                    "GUEST_PLATFORM": [
+                        "linux64"
+                    ],
+                    "TYPE": "native",
+                    "EXECUTABLE": "",
+                    "ARGS": [],
+                    "ENV": {},
+                    "REMOVE_ENV": [],
+                    "MODULES": [],
+                    "RECOMMENDED": true
+                }
+            ]
         }
     ]
 }

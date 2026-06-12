@@ -2,7 +2,6 @@
     "PACKAGEUID": "runner-ge-proton10-30",
     "PACKAGENAME": "GE-Proton 10-30",
     "PACKAGEVERSION": "10-30",
-    "HOST_PLATFORM": "linux64",
     "COMPONENTS": [
         {
             "COMPONENTID": "geproton_build",
@@ -23,24 +22,35 @@
         {
             "RUNNER_ID": "ge-proton10-30",
             "NAME": "GE-Proton 10-30",
-            "TYPE": "wine",
-            "GUEST_PLATFORM": [
-                "win32",
-                "win64"
-            ],
-            "EXECUTABLE": "%RunnerMount%/proton",
-            "PREFIX_SUBPATH": "pfx",
-            "ARGS": [
-                "waitforexitandrun"
-            ],
-            "ENV": {
-                "STEAM_COMPAT_DATA_PATH": "%PrefixBase%",
-                "STEAM_COMPAT_CLIENT_INSTALL_PATH": "%TempPath%"
-            },
-            "REMOVE_ENV": [
-                "LD_LIBRARY_PATH"
-            ],
-            "MODULES": []
+            "VARIANTS": [
+                {
+                    "VARIANT_ID": "default",
+                    "HOST_PLATFORM": "linux64",
+                    "GUEST_PLATFORM": [
+                        "win32",
+                        "win64"
+                    ],
+                    "TYPE": "wine",
+                    "EXECUTABLE": "%RunnerMount%/proton",
+                    "PREFIX_SUBPATH": "pfx",
+                    "ARGS": [
+                        "waitforexitandrun"
+                    ],
+                    "ENV": {
+                        "STEAM_COMPAT_DATA_PATH": "%PrefixBase%",
+                        "STEAM_COMPAT_CLIENT_INSTALL_PATH": "%TempPath%"
+                    },
+                    "REMOVE_ENV": [
+                        "LD_LIBRARY_PATH"
+                    ],
+                    "MODULES": [
+                        {
+                            "COMPONENT": "geproton_build"
+                        }
+                    ],
+                    "RECOMMENDED": true
+                }
+            ]
         }
     ]
 }
